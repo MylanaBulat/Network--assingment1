@@ -71,25 +71,6 @@ public class Worker extends Node {
                 //this.wait();
                 fin.close();
 
-                /**String fileName = getFileName(content);
-                File file = new File(fileName);
-                byte[] buffer = new byte[(int) file.length()];
-                FileInputStream fin = new FileInputStream(file);
-                int size = fin.read(buffer);
-                if (size == -1) {
-                    fin.close();
-                    throw new Exception("Problem with File Access:" + fileName);
-                }
-                System.out.println("File size: " + buffer.length);
-                FileInfoContent fileContent;
-                fileContent = new FileInfoContent(fileName, size, buffer);
-
-                System.out.println("Sending packet w/ name & length");
-                DatagramPacket response;
-                response = fileContent.toDatagramPacket();
-                response.setSocketAddress(packet.getSocketAddress());
-                System.out.println("Sending file to Ingress");
-                socket.send(response);*/
             }
         }
         catch(Exception e) {e.printStackTrace();}
